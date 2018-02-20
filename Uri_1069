@@ -26,9 +26,8 @@ public class Uri_1069 {
 					if(input.charAt(j) == '<')
 						temp +=1;
 					
-					if(input.charAt(j) == '>');
-						if(temp > 0)
-						{
+					if(input.charAt(j) == '>')
+						if(temp > 0){
 							
 							temp -= 1;
 							counter += 1;
