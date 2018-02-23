@@ -1,0 +1,64 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Uri_1211 {
+
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		try {
+			
+			String input = br.readLine();
+			String Phonenumber;
+			char [] phon_number;
+			int cases , counter;
+			
+			while(!input.equals("")) {
+				
+				cases = Integer.parseInt(br.readLine());
+				counter = 0;
+				
+				Phonenumber = br.readLine();
+				phon_number = new char[Phonenumber.length()];
+				//phon_number = Phonenumber.toCharArray();
+				
+				for (int i = 0; i < phon_number.length; i++)
+					phon_number[i] = Phonenumber.charAt(i);
+				
+				
+				for (int i = 0; i < phon_number.length; i++) {
+					
+					Phonenumber = br.readLine();
+					int j = 0;
+					
+					while(true) {
+						
+						if(phon_number[j]==Phonenumber.charAt(j)){
+							
+						counter +=1;
+						
+						}else {
+							break;
+						}
+						
+						j++;
+					}
+				}
+				
+				bw.write(counter + "\n");
+				bw.flush();
+				input = br.readLine();
+				
+			}
+			
+		}
+		catch(Exception ex) {}
+		
+
+	}
+
+}
